@@ -1,7 +1,6 @@
 # 📊 Editor de CSV con Streamlit
----
+
 ## [Ver aplicación en vivo](https://csv-editor.streamlit.app/)
----
 
 Una aplicación web completa y fácil de usar para editar archivos CSV, crear tablas desde cero y generar datos aleatorios para pruebas.
 
