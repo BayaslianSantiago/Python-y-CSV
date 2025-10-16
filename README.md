@@ -118,4 +118,4 @@ Tu Nombre
 - Email: bayasliansantiago@gmail.com
 ---
 
-Hecho con ❤️ usando Streamlit
+Agradecimientos al Instituto Tecnologico Beltran y a su docentes. <3
