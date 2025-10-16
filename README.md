@@ -93,14 +93,6 @@ pandas>=2.0.0
 6. Edita si es necesario
 7. Descarga el CSV generado
 
-## 📸 Capturas de Pantalla
-
-### Editor de CSV
-![Editor](https://via.placeholder.com/800x400?text=Agrega+tu+captura+aquí)
-
-### Generador de Datos
-![Generador](https://via.placeholder.com/800x400?text=Agrega+tu+captura+aquí)
-
 ## 🛠️ Tecnologías Utilizadas
 
 - **[Streamlit](https://streamlit.io/)**: Framework para crear aplicaciones web
