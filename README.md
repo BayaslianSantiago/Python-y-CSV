@@ -118,4 +118,4 @@ Tu Nombre
 - Email: bayasliansantiago@gmail.com
 ---
 
-Agradecimientos al Instituto Tecnologico Beltran y a su docentes. <3
+Agradecimientos al Instituto Tecnologico Beltran y a sus docentes.
