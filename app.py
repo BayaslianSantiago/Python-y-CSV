@@ -60,6 +60,68 @@ def generar_lorem(n):
 st.title("📊 Editor de Archivos CSV")
 st.markdown("Sube tu archivo CSV, edítalo y descarga los cambios")
 
+import streamlit as st
+import pandas as pd
+from io import StringIO
+import random
+from datetime import datetime, timedelta
+
+st.set_page_config(page_title="Editor de CSV", page_icon="📊", layout="wide")
+
+# Funciones para generar datos aleatorios
+def generar_nombres(n):
+    nombres = ["Juan", "María", "Carlos", "Ana", "Pedro", "Laura", "Diego", "Sofía", 
+               "Miguel", "Lucía", "Fernando", "Valentina", "Roberto", "Camila", "Jorge",
+               "Isabella", "Luis", "Martina", "Antonio", "Victoria"]
+    apellidos = ["García", "Rodríguez", "Martínez", "López", "González", "Pérez", 
+                 "Sánchez", "Ramírez", "Torres", "Flores", "Rivera", "Gómez", "Díaz",
+                 "Cruz", "Morales", "Reyes", "Jiménez", "Hernández", "Ruiz", "Vargas"]
+    return [f"{random.choice(nombres)} {random.choice(apellidos)}" for _ in range(n)]
+
+def generar_emails(n):
+    dominios = ["gmail.com", "hotmail.com", "yahoo.com", "outlook.com", "empresa.com"]
+    nombres = ["user", "contact", "info", "admin", "support", "juan", "maria", "carlos"]
+    return [f"{random.choice(nombres)}{random.randint(1, 999)}@{random.choice(dominios)}" for _ in range(n)]
+
+def generar_telefonos(n):
+    return [f"+54 9 11 {random.randint(1000, 9999)}-{random.randint(1000, 9999)}" for _ in range(n)]
+
+def generar_fechas(n, inicio="2020-01-01", fin="2024-12-31"):
+    start = datetime.strptime(inicio, "%Y-%m-%d")
+    end = datetime.strptime(fin, "%Y-%m-%d")
+    delta = end - start
+    return [(start + timedelta(days=random.randint(0, delta.days))).strftime("%Y-%m-%d") for _ in range(n)]
+
+def generar_numeros(n, minimo=1, maximo=100, decimales=False):
+    if decimales:
+        return [round(random.uniform(minimo, maximo), 2) for _ in range(n)]
+    return [random.randint(minimo, maximo) for _ in range(n)]
+
+def generar_ciudades(n):
+    ciudades = ["Buenos Aires", "Córdoba", "Rosario", "Mendoza", "La Plata", "San Miguel de Tucumán",
+                "Mar del Plata", "Salta", "Santa Fe", "San Juan", "Resistencia", "Neuquén",
+                "Posadas", "Bahía Blanca", "Paraná", "San Salvador de Jujuy"]
+    return [random.choice(ciudades) for _ in range(n)]
+
+def generar_productos(n):
+    productos = ["Laptop", "Mouse", "Teclado", "Monitor", "Auriculares", "Webcam", "Micrófono",
+                 "Tablet", "Smartphone", "Impresora", "Scanner", "Router", "Disco Duro", "USB",
+                 "Cable HDMI", "Adaptador", "Cargador", "Batería", "Mousepad", "Soporte"]
+    return [random.choice(productos) for _ in range(n)]
+
+def generar_booleanos(n):
+    return [random.choice([True, False]) for _ in range(n)]
+
+def generar_lorem(n):
+    palabras = ["lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit",
+                "sed", "do", "eiusmod", "tempor", "incididunt", "ut", "labore", "et", "dolore",
+                "magna", "aliqua"]
+    return [" ".join(random.choices(palabras, k=random.randint(3, 8))).capitalize() + "." for _ in range(n)]
+
+
+st.title("📊 Editor de Archivos CSV")
+st.markdown("Sube tu archivo CSV, edítalo y descarga los cambios")
+
 # Tabs para elegir entre importar o crear
 tab1, tab2, tab3 = st.tabs(["📂 Importar CSV", "➕ Crear Nueva Tabla", "🎲 Generar Datos Aleatorios"])
 
