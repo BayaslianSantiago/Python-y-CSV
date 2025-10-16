@@ -101,14 +101,6 @@ with tab1:
                 mime="text/csv",
                 type="primary"
             )
-            # Botón de descarga JSON
-            st.download_button(
-                label="⬇️ Descargar JSON modificado",
-                data=edited_df.to_json(orient='records', force_ascii=False, indent=2),
-                file_name=f"editado_{uploaded_file.name.replace('.csv', '.json')}",
-                mime="application/json",
-                type="secondary"
-            )
             
             # Mostrar estadísticas
             col1, col2 = st.columns(2)
