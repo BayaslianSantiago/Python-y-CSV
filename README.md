@@ -114,7 +114,6 @@ pandas>=2.0.0
 
 ## 👤 Autor
 
-Tu Nombre
 - GitHub: [@Bayaslian_Santiago](https://github.com/BayaslianSantiago/)
 - Email: bayasliansantiago@gmail.com
 ---
